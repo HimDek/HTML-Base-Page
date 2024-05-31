@@ -2,12 +2,14 @@
 
 [View WebPage](https://himdek.com/HTML-Base-Page/)
 
-## Description:
+## Basic Level HTML Structure and Styling
+
+### Description:
 Create a simple webpage using HTML to
 define its structure and CSS to style elements
 such as text, colors, and layout.
 
-## Responsibility:
+### Responsibility:
 Ensure semantic HTML markup for
 accessibility and search engine
 optimization (SEO). Use CSS responsibly
