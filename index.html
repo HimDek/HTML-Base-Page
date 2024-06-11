@@ -8,34 +8,44 @@
     <meta name="keywords" content="HTML, CSS, SEO">
     <meta name="author" content="Himpakash Deka">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Base Page</title>
+    <title>HTML Responsive Page</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: rgb(194, 203, 211);
-            color: #213542;
+            background-color: rgb(169, 166, 246);
+            color: #311b57;
+            margin: 0;
+        }
+
+        .bg-primary {
+            background-color: rgb(163, 160, 248);
         }
 
         .fg-secondary {
-            color: #6c757d;
+            color: #505c66;
         }
 
-        .small {
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        small {
             font-size: 0.8rem;
         }
 
         a {
             text-decoration: none;
-            color: #3c6086;
+            color: #5f37cb;
         }
 
         a:hover:not(.text-shadow-none) {
-            text-shadow: #8092a5 0px 0px 5px;
+            text-shadow: #311b57 0px 0px 8px;
         }
 
         .text-decoration-none {
             text-decoration: none;
-            color: #213542;
+            color: #311b57;
         }
 
         .text-shadow-none {
@@ -43,9 +53,17 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1024px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 2rem;
+        }
+
+        .p-1 {
+            padding: 1rem;
+        }
+
+        .p-2 {
+            padding: 2rem;
         }
 
         .mt-0 {
@@ -64,6 +82,30 @@
             margin-right: 0;
         }
 
+        .mt-1 {
+            margin-top: 1rem;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .ms-2 {
+            margin-left: 2rem;
+        }
+
+        .me-2 {
+            margin-right: 2rem;
+        }
+
         .mt-3 {
             margin-top: 3rem;
         }
@@ -72,69 +114,483 @@
             margin-bottom: 3rem;
         }
 
-        .d-flex {
-            display: flex;
+        .ms-3 {
+            margin-left: 3rem;
+        }
+
+        .me-3 {
+            margin-right: 3rem;
         }
 
         .align-items-center {
             align-items: center;
         }
 
+        .justify-content-start {
+            justify-content: flex-start;
+        }
+
+        .justify-content-end {
+            justify-content: flex-end;
+        }
+
         .justify-content-between {
             justify-content: space-between;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .text-start {
+            text-align: start;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .row {
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .col {
+            flex: 1 0 0%;
+        }
+
+        .col-12 {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        .col-9 {
+            flex: 0 0 auto;
+            width: 75%;
+        }
+
+        .col-8 {
+            flex: 0 0 auto;
+            width: 66.6666666667%;
+        }
+
+        .col-7 {
+            flex: 0 0 auto;
+            width: 58.3333333333%;
+        }
+
+        .col-6 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+
+        .col-5 {
+            flex: 0 0 auto;
+            width: 41.6666666667%;
+        }
+
+        .col-4 {
+            flex: 0 0 auto;
+            width: 33.3333333333%;
+        }
+
+        .col-3 {
+            flex: 0 0 auto;
+            width: 25%;
+        }
+
+        @media screen and (min-width: 576px) {
+            .row {
+                gap: 2rem
+            }
+
+            .p-sm-2 {
+                padding: 2rem;
+            }
+
+            .col-sm {
+                flex: 1 0 0%;
+            }
+
+            .col-sm-12 {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+
+            .col-sm-9 {
+                flex: 0 0 auto;
+                width: 75%;
+            }
+
+            .col-sm-8 {
+                flex: 0 0 auto;
+                width: 66.6666666667%;
+            }
+
+            .col-sm-7 {
+                flex: 0 0 auto;
+                width: 58.3333333333%;
+            }
+
+            .col-sm-6 {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+
+            .col-sm-5 {
+                flex: 0 0 auto;
+                width: 41.6666666667%;
+            }
+
+            .col-sm-4 {
+                flex: 0 0 auto;
+                width: 33.3333333333%;
+            }
+
+            .col-sm-3 {
+                flex: 0 0 auto;
+                width: 25%;
+            }
+
+            .row-sm-reverse {
+                flex-direction: row-reverse;
+                flex-wrap: wrap-reverse;
+            }
+
+            .text-sm-start {
+                text-align: start;
+            }
+
+            .text-sm-center {
+                text-align: center;
+            }
+
+            .text-sm-end {
+                text-align: end;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .col-md {
+                flex: 1 0 0%;
+            }
+
+            .col-md-12 {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+
+            .col-md-9 {
+                flex: 0 0 auto;
+                width: 75%;
+            }
+
+            .col-md-8 {
+                flex: 0 0 auto;
+                width: 66.6666666667%;
+            }
+
+            .col-md-7 {
+                flex: 0 0 auto;
+                width: 58.3333333333%;
+            }
+
+            .col-md-6 {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+
+            .col-md-5 {
+                flex: 0 0 auto;
+                width: 41.6666666667%;
+            }
+
+            .col-md-4 {
+                flex: 0 0 auto;
+                width: 33.3333333333%;
+            }
+
+            .col-md-3 {
+                flex: 0 0 auto;
+                width: 25%;
+            }
+
+            .row-md-reverse {
+                flex-direction: row-reverse;
+                flex-wrap: wrap-reverse;
+            }
+
+            .text-md-start {
+                text-align: start;
+            }
+
+            .text-md-center {
+                text-align: center;
+            }
+
+            .text-md-end {
+                text-align: end;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .col-lg {
+                flex: 1 0 0%;
+            }
+
+            .col-lg-12 {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+
+            .col-lg-9 {
+                flex: 0 0 auto;
+                width: 75%;
+            }
+
+            .col-lg-8 {
+                flex: 0 0 auto;
+                width: 66.6666666667%;
+            }
+
+            .col-lg-7 {
+                flex: 0 0 auto;
+                width: 58.3333333333%;
+            }
+
+            .col-lg-6 {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+
+            .col-lg-5 {
+                flex: 0 0 auto;
+                width: 41.6666666667%;
+            }
+
+            .col-lg-4 {
+                flex: 0 0 auto;
+                width: 33.3333333333%;
+            }
+
+            .col-lg-3 {
+                flex: 0 0 auto;
+                width: 25%;
+            }
+
+            .row-lg-reverse {
+                flex-direction: row-reverse;
+                flex-wrap: wrap-reverse;
+            }
+
+            .text-lg-start {
+                text-align: start;
+            }
+
+            .text-lg-center {
+                text-align: center;
+            }
+
+            .text-lg-end {
+                text-align: end;
+            }
+
+            .justify-content-lg-end {
+                justify-content: flex-end;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .col-xl {
+                flex: 1 0 0%;
+            }
+
+            .col-xl-12 {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+
+            .col-xl-9 {
+                flex: 0 0 auto;
+                width: 75%;
+            }
+
+            .col-xl-8 {
+                flex: 0 0 auto;
+                width: 66.6666666667%;
+            }
+
+            .col-xl-7 {
+                flex: 0 0 auto;
+                width: 58.3333333333%;
+            }
+
+            .col-xl-6 {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+
+            .col-xl-5 {
+                flex: 0 0 auto;
+                width: 41.6666666667%;
+            }
+
+            .col-xl-4 {
+                flex: 0 0 auto;
+                width: 33.3333333333%;
+            }
+
+            .col-xl-3 {
+                flex: 0 0 auto;
+                width: 25%;
+            }
+
+            .row-xl-reverse {
+                flex-direction: row-reverse;
+                flex-wrap: wrap-reverse;
+            }
+
+            .text-xl-start {
+                text-align: start;
+            }
+
+            .text-xl-center {
+                text-align: center;
+            }
+
+            .text-xl-end {
+                text-align: end;
+            }
         }
 
         .flex-wrap {
             flex-wrap: wrap;
         }
+
+        .rounded-circle {
+            border-radius: 50%;
+            width: 100%;
+        }
+
+        .max-content {
+            min-width: max-content;
+        }
+
+        .min-content {
+            min-width: min-content;
+        }
+
+        .fit-content {
+            min-width: fit-content;
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
     </style>
 </head>
 
 <body>
+    <div class="sticky-top bg-primary row align-items-center justify-content-between flex-wrap p-1 p-sm-2">
+        <div class="col-12 col-lg">
+            <h1 class="mt-0 mb-0"><a href="#" class="text-shadow-none text-decoration-none">Responsive Web Page</a>
+            </h1>
+            <p class="mt-0 mb-0 fg-secondary">By Himpakash Deka</p>
+        </div>
+        <div class="col d-flex justify-content-start justify-content-lg-end">
+            <a href="https://himdek.com/HTML-Base-Page/">
+                View GitHub Repository
+            </a>
+        </div>
+    </div>
     <div class="container">
         <div>
-            <div class="d-flex align-items-center justify-content-between flex-wrap">
-                <div>
-                    <h1 class="mb-0"><a href="#" class="text-shadow-none text-decoration-none">HTML Base Page</a></h1>
-                    <p class="mt-0 fg-secondary">By Himpakash Deka</p>
-                </div>
-                <a href="https://himdek.com/HTML-Base-Page/">View GitHub Repository</a>
+
+            <small>Main Flow Services and Technologies Full Stack Web Development Internship</small>
+
+            <div>
+                <h3 class="mb-0">Basic Level HTML Structure and Styling</h3>
+                <small class="fg-secondary">Task 1</small>
             </div>
 
-            <div class="mt-3 mb-3">
-                <h3 class="mb-0">Basic Level HTML Structure and Styling</h3>
-                <p class="mt-0 fg-secondary small">Main Flow Services and Technologies Full Stack Web Development Internship Task 1</p>
+            <div class="mb-3">
+                <h3 class="mb-0">Improve, Responsive Design and Media Queries</h3>
+                <small class="fg-secondary">Task 2</small>
             </div>
 
             <p>
                 A simple webpage using HTML to define its structure and CSS to style elements such as text, colors, and
-                layout.
+                layout. Improved with CSS
+                property, Implement responsive design
+                techniques using media queries to ensure
+                optimal display and usability across
+                various devices and screen sizes. <strong>View this page on different screen or window sizes to see the responsive
+                    design in
+                    action.</strong>
             </p>
         </div>
-        <div class="mt-3">
-            <h2>About Me</h2>
-            <p>
-                I am <b>Himprakash Deka</b> a programmer from India. I am pursuing my <abbr title="Bachelor of Technology">B.Tech</abbr> in <abbr title="Computer Science and Engineering">CSE</abbr> from <abbr title="Assam University, Silchar">AUS</abbr>. I make themes and
-                widgets for <a href="https://kde.org/">KDE</a> <a href="https://kde.org/plasma-desktop/">Plasma</a> and a lot of other cool stuffs.
-            </p>
-            <ul class="mt-3 mb-3">
-                <li>
-                    <h3 class="mb-0">Himprakash Deka</h3>
-                    <p class="mt-0 fg-secondary small">Name</p>
-                </li>
-                <li>
-                    <h3 class="mb-0"><a href="https://himdek.com/" class="text-decoration-none">HimDek.com</a></h3>
-                    <p class="mt-0 fg-secondary small">Portfolio WebSite</p>
-                </li>
-                <li>
-                    <h3 class="mb-0"><a href="https://github.com/HimDek/" class="text-decoration-none">HimDek</a></h3>
-                    <p class="mt-0 fg-secondary small">GitHub</p>
-                </li>
-                <li>
-                    <h3 class="mb-0"><a href="https://www.linkedin.com/in/himprakashdeka/" class="text-decoration-none">HimprakashDeka</a></h3>
-                    <p class="mt-0 fg-secondary small">LinkedIn</p>
-                </li>
-            </ul>
+        <div class="mt-3 mb-3 row row-md-reverse align-items-start justify-content-center">
+            <div class="mt-1 col-12 col-md d-flex flex-column">
+                <h1 class="mt-1 mb-0">About Me</h1>
+                <p class="mt-1">
+                    I am <b>Himprakash Deka</b>, a programmer from Guwahati, Assam, India. I am pursuing my <abbr
+                        title="Bachelor of Technology">B.Tech</abbr> in <abbr
+                        title="Computer Science and Engineering">CSE</abbr> from <abbr
+                        title="Assam University, Silchar">AUS</abbr>. I make themes and
+                    widgets for <a href="https://kde.org/">KDE</a> <a href="https://kde.org/plasma-desktop/">Plasma</a>
+                    which you can check <a href="https://store.kde.org/u/himdek/">here</a>
+                    alongside a lot of other cool stuffs. As a computer enthusiast, I am passionate about technology and
+                    always excited to gain new
+                    skills and put my existing skills to test.
+                </p>
+            </div>
+            <div class="col col-md-7 col-lg-6 col-xl-5 row align-items-center justify-content-center">
+                <div class="col-12 col-sm text-center text-sm-end">
+                    <img class="rounded-circle" style="min-width: 128px; max-width: 224px;"
+                        src="https://avatars.githubusercontent.com/u/61367380" alt="My Image">
+                </div>
+                <ul class="col max-content text-center text-sm-start">
+                    <li class="mt-1 mb-1">
+                        <h3 class="mt-0 mb-0">Himprakash Deka</h3>
+                        <small class="fg-secondary">Name</small>
+                    </li>
+                    <li class="mt-1 mb-1">
+                        <h3 class="mt-0 mb-0"><a href="https://himdek.com/" class="text-decoration-none">HimDek.com</a>
+                        </h3>
+                        <small class="fg-secondary">Portfolio WebSite</small>
+                    </li>
+                    <li class="mt-1 mb-1">
+                        <h3 class="mt-0 mb-0"><a href="https://github.com/HimDek/"
+                                class="text-decoration-none">HimDek</a>
+                        </h3>
+                        <small class="fg-secondary">GitHub</small>
+                    </li>
+                    <li class="mt-1 mb-1">
+                        <h3 class="mt-0 mb-0"><a href="https://www.linkedin.com/in/himprakashdeka/"
+                                class="text-decoration-none">HimprakashDeka</a></h3>
+                        <small class="fg-secondary">LinkedIn</small>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div>
             <p>
                 With a robust background in backend development utilizing Django and Django REST Framework, complemented
                 by application development skills in Flutter, Visual C++, and C#, I bring a wealth of experience to the
@@ -147,10 +603,6 @@
             <p>
                 My proficiency extends to AWS services such as EC2, S3, and RDS, coupled with adept domain management,
                 cloud deployment, CLI, and Linux skills.
-            </p>
-            <p>
-                Passionate about technology and committed to delivering excellence, I thrive in the ever-evolving
-                landscape of software development.
             </p>
         </div>
     </div>
